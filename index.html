@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Identitas Diri — Rachel Anjhanie</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg-gradient: linear-gradient(180deg,#FFB6C1 0%, #FFDDE6 60%, #FFFFFF 100%);
+    --accent:#E394B5;
+    --accent-strong:#FF6FA3;
+    --card:#ffffff;
+    --text:#2c2c2c;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family: 'Nunito', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    color:var(--text);
+    background: var(--bg-gradient);
+    -webkit-font-smoothing:antialiased;
+    padding:28px;
+    overflow-x:hidden;
+  }
+
+  .container{
+    max-width:920px;
+    margin:0 auto;
+    animation: fadeIn 1.4s ease-in-out;
+  }
+
+  /* ANIMASI */
+  @keyframes fadeIn {
+    from { opacity:0; transform: translateY(20px); }
+    to { opacity:1; transform: translateY(0); }
+  }
+
+  @keyframes float {
+    0%,100% { transform:translateY(0); }
+    50% { transform:translateY(-6px); }
+  }
+
+  .hero{
+    display:flex;
+    gap:20px;
+    align-items:center;
+    background:linear-gradient(180deg, rgba(255,255,255,0.7), rgba(255,255,255,0.9));
+    border-radius:20px;
+    padding:22px;
+    box-shadow:0 8px 30px rgba(0,0,0,0.06);
+    backdrop-filter: blur(6px);
+    animation: float 5s ease-in-out infinite;
+  }
+
+  .avatar{
+    width:110px;
+    height:110px;
+    border-radius:999px;
+    flex:0 0 110px;
+    border:6px solid rgba(255,255,255,0.6);
+    box-shadow:0 6px 18px rgba(227,147,181,0.2);
+    object-fit:cover;
+  }
+
+  .hero h1{
+    margin:0;
+    font-family:'Baloo 2', cursive;
+    font-size:28px;
+  }
+  .hero p{
+    margin:6px 0 12px;
+    color:#5b5b5b;
+  }
+
+  .btn{
+    display:inline-block;
+    padding:10px 16px;
+    border-radius:999px;
+    border:none;
+    text-decoration:none;
+    font-weight:700;
+    transition:transform .18s ease, box-shadow .18s ease;
+    box-shadow: 0 6px 18px rgba(227,147,181,0.12);
+  }
+  .btn-secondary{
+    background:white;
+    border:1px solid rgba(0,0,0,0.06);
+    color:var(--accent-strong);
+  }
+
+  .btn:hover{
+    transform:translateY(-4px) scale(1.05);
+    box-shadow:0 8px 22px rgba(227,147,181,0.24);
+  }
+
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:14px;
+    margin-top:18px;
+  }
+  .card{
+    background:var(--card);
+    padding:14px;
+    border-radius:16px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.04);
+    transition:transform .18s ease;
+    animation: fadeIn 1.2s ease forwards;
+  }
+  .card:hover{transform:translateY(-6px)}
+  .muted{color:#7a7a7a;font-size:14px}
+
+  footer{
+    margin-top:20px;
+    text-align:center;
+    color:#6b6b6b;
+    font-size:13px;
+  }
+
+  /* Responsif */
+  @media (max-width:720px){
+    .hero{flex-direction:column;align-items:flex-start}
+    .grid{grid-template-columns:1fr}
+    .avatar{width:96px;height:96px}
+    .hero h1{font-size:24px}
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <header class="hero" role="banner" aria-label="Identitas Diri">
+      <!-- Ganti URL foto di bawah -->
+      <img src="content://media/external/downloads/1000111511" alt="Foto Rachel Anjhanie" class="avatar">
+
+      <div>
+        <h1>Hai! Saya Rachel Anjhanie</h1>
+        <p class="muted">Mahasiswi • Make Up • Beauty • Pacar Adhien 💕</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn btn-secondary" href="https://www.instagram.com/another_favv" target="_blank" role="button">
+            Ini Instagram Aku
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <section style="margin-top:18px">
+      <h2 style="font-family:'Baloo 2', cursive;margin-bottom:8px">Tentang Aku</h2>
+      <p style="color:#555;line-height:1.6">
+        Aku Rachel Anjhanie, Aku Sekolah di Smkn 27 Jakarta, aku anak kedua dari 3 bersaudara 🌸  
+      </p>
+    </section>
+
+    <section style="margin-top:24px">
+      <h2 style="font-family:'Baloo 2', cursive;margin-bottom:8px">Hobi & Minat</h2>
+      <div class="grid" aria-label="Hobi">
+        <article class="card">
+          <h3 style="margin:0 0 8px">Make Up</h3>
+          <p class="muted">Dari dulu, aku suka sekali make up, dan sekarang aku sekolah dengan jurusan kecantikan.</p>
+        </article>
+        <article class="card">
+          <h3 style="margin:0 0 8px">Makan</h3>
+          <p class="muted">Aku juga suka makan makan dan nyobain makanan yang sebelumnya aku makan.</p>
+        </article>
+        <article class="card">
+          <h3 style="margin:0 0 8px">Adhien</h3>
+          <p class="muted">Selain minat dengan sesuatu, aku juga minat dengan seseorang, namanya Fardhin Ikbar.</p>
+        </article>
+      </div>
+    </section>
+
+    <footer>
+      © 2025 Rachel Anjhanie — Beautyfull girl in every universe. Web ini dibuat oleh Fardhin💖
+    </footer>
+  </div>
+</body>
+</html>
